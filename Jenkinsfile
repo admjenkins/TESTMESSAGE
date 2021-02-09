@@ -20,7 +20,7 @@ pipeline {
 
     stage('DEPLOY') {
       steps {
-        echo 'ITS THE DEPOLYMNT PART'
+        echo 'ITS THE DEPOLYMENT PART'
       }
     }
 
