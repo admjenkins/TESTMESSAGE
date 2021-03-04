@@ -1,1 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>apacheCommons</artifactId>
+    <groupId>fr.ejn.tutorial</groupId>
+    <name>Apache Commons Examples</name>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+    <description>Examples using Apache Commons frameworks</description>
 
+    <dependencies>
+        <dependency>
+            <artifactId>commons-collections4</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <version>${commons-collections4.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>commons-io</artifactId>
+            <groupId>commons-io</groupId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>commons-csv</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <version>${commons-csv.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>commons-lang3</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <!-- For logging -->
+        <dependency>
+            <artifactId>logback-classic</artifactId>
+            <groupId>ch.qos.logback</groupId>
+            <version>${logback.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <artifactId>logback-core</artifactId>
+            <groupId>ch.qos.logback</groupId>
+            <version>${logback.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <artifactId>slf4j-api</artifactId>
+            <groupId>org.slf4j</groupId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        
+        <!-- For tests -->
+        <dependency>
+            <artifactId>junit</artifactId>
+            <groupId>junit</groupId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>2.10</version>
+                <configuration>
+                    <downloadJavadocs>true</downloadJavadocs>
+                    <downloadSources>true</downloadSources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <!-- Project properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compile.source>1.7</maven.compile.source>
+        <maven.compile.target>1.7</maven.compile.target>
+        
+        <!-- Dependency versions -->
+        <commons-collections4.version>4.1</commons-collections4.version>
+        <commons-csv.version>1.4</commons-csv.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <junit.version>4.12</junit.version>
+        <logback.version>1.1.7</logback.version>
+        <slf4j.version>1.7.21</slf4j.version>
+    </properties>
+
+</project>
