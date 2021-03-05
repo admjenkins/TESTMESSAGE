@@ -1,0 +1,12 @@
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>DBI-LT-NSO-releases</name>
+        <url>http://localhost:8082/artifactory/MAVENREPO</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>DBI-LT-NSO-snapshots</name>
+        <url>http://localhost:8082/artifactory/MAVENREPO</url>
+    </snapshotRepository>
+</distributionManagement>
